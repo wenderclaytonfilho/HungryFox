@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/pixel_animals (1).png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8.97059 )
+
+[node name="Tree" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 0.5 )
+scale = Vector2( 1, 0.944444 )
+texture = ExtResource( 1 )
+hframes = 8
+vframes = 7
+frame = 49
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( 0, -1.02941 )
+z_index = 1
+shape = SubResource( 1 )
